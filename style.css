@@ -1,0 +1,590 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box 
+}
+
+html,body {
+width: 100%;
+height: 100%;
+font-family: head;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+@font-face {
+    font-family: regular;
+    src: url(./static/Fonts/TWKLausanne-300.b6399e7.ttf);
+}
+
+@font-face {
+    font-family: medium;
+    src: url(./static/Fonts/TWKLausanne-400.c74d82a.ttf);
+}
+
+@font-face {
+    font-family: bold;
+    src: url(./static/Fonts/TWKLausanne-500.eb0ea77.ttf);
+}
+
+@font-face {
+    font-family: other;
+    src: url(./static/Fonts/poppins.ttf);
+}
+
+#cursor {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d0d0d04b;
+    position: fixed;
+    font-family: medium;
+    color: #fff;
+    pointer-events: none;
+    scale: 0;
+    z-index: 10;
+}
+
+.hoverText{
+    width: fit-content;
+    height: fit-content;
+}
+
+.hoverText:hover {
+    cursor: pointer;
+}
+
+.hoverText .hoverLine {
+    width: 100%;
+    height: 0.1vh;
+    background-color: #fff;
+    transform-origin: right;
+    transform: scaleX(0);
+    pointer-events: none;
+}
+
+#page1
+{
+width: 100%;
+height: 240vh;
+background-image: url(./static/images/pg1_bg.webp);
+filter: brightness(0.9);
+background-size: cover;
+color: #fff;
+}
+
+nav
+{
+width: 100%;
+height: 13vh;
+font-family: regular;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0vw 3vw;
+}
+
+nav > h5 {
+    font-size: 1.5vw;
+}
+
+nav> h5 span {
+    font-family: regular;
+    font-style: italic;
+    font-weight: 500;
+}
+
+nav #right {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+
+nav .hoverText {
+    padding: 0.5vw;
+}
+
+nav #right h5 {
+    font-family: medium;
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#page1 #mainbox {
+    width: 100%;
+    height: calc(100% - 13vh);
+    padding: 10vw 8vw;
+    padding-top: 25vw;
+    font-family: medium;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+#page1 #mainbox #text-1,
+#page1 #mainbox #text-2 {
+    width: 37vw;
+}
+
+#page1 #mainbox #text-1 h3,
+#page1 #mainbox #text-2 h3 {
+    font-size: 1.6vw;
+    font-weight: 500;
+}
+
+#page1 #mainbox #head h1 {
+    font-size: 17vw;
+    line-height: 1;
+    letter-spacing: -12px;
+    font-family: regular;
+    font-weight: 500;
+}
+
+#page1 #pg-1-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: medium;
+}
+
+#page1 #pg-1-footer h5 {
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+
+#page1 #pg-1-footer #right {
+    display: flex;
+    gap: 5vw;
+}
+
+#page1 #pg-1-footer #right #inner-left,
+#page1 #pg-1-footer #right #inner-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+#page2 {
+    width: 100%;
+    height: 300vh;
+    background-color: #fff;
+    padding: 6vw 0vw;
+    padding-bottom: 0vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#page2 .card {
+    position: relative;
+}
+
+#page2 .card img ,
+#page2 .card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page2 .card video {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    opacity: 0;
+}
+
+#page2 #head {
+    width: 100%;
+    padding-left: 17vw;
+}
+
+#page2 #head h1 {
+    font-family: regular;
+    font-weight: 500;
+    font-size: 15vw;
+    color: #0D0E13;
+}
+
+#page2 #upper {
+    width: 100%;
+    display: flex;
+}
+
+#page2 #upper #left {
+    width: 60%;
+    padding-left: 17vw;
+}
+
+#page2 #upper #right {
+    width: 35%;
+    padding-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 12vw;
+}
+
+#page2 #upper #right #text {
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+#page2 #upper #right #text #line-1 {
+    display: flex;
+    gap: 1vw;
+}
+
+#page2 #upper #right #text #line-1 h5 {
+    font-size: 1vw;
+    font-family: regular;
+    font-weight: 500;
+}
+
+#page2 #upper #right #text #line-2 h3 {
+    font-size: 2vw;
+    font-family: regular;
+    font-weight: 500;
+}
+
+#page2 #lower {
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+    display: flex;
+    padding: 10vw 0vw;
+}
+
+#page2 #lower #left {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding-right: 2vw;
+}
+
+#page2 #lower #left #card-3 {
+    width: 18vw;
+    height: 24vw;
+}
+
+#page2 #lower #right {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10vw;
+    padding-right: 20vw;
+}
+
+#page2 #lower #right #card-4 {
+    width: 35vw;
+    height: 80vh;
+}
+
+#page2 #lower #right h5 {
+    font-size: 1vw;
+    font-family: regular;
+    font-weight: 500;
+}
+
+#page3 {
+    width: 100%;
+    height: 100vh;
+    background-color: #0D0E13;
+    color: #E4E0DB;
+    font-family: medium;
+    padding: 3vw 0vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+#page3 #header {
+    width: 100%;
+    height: 33.3%;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    z-index: 3;
+}
+
+#page3 #header h5 {
+    font-weight: 500;
+    font-size: 1vw;
+}
+
+#page3 #mainbox {
+    width: 100%;
+    height: 33.3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page3 #mainbox #video {
+    width: 32vw;
+    height: 16vw;
+    z-index: 2;
+}
+
+#page3 #mainbox #video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+#page3 #mainbox .head {
+    font-size: 10vw;
+    font-family: regular;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+
+#page3 #mainbox #head-1 {
+    left: 10%; 
+    transform: translate(-10%, -50%); 
+}
+
+#page3 #mainbox #head-2 {
+    left: 80%; 
+    transform: translate(-40%, -50%); 
+}
+
+#page3 #footer {
+    width: 100%;
+    height: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    z-index: 3;
+}
+
+#page3 #footer h5 {
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#page4 {
+    width: 100%;
+    height: 220vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: medium;
+}
+
+#page4 #upper {
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page4 #upper #main-img {
+    width: 25vw;
+    height: 80vh;
+}
+
+#page4 #upper #main-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page4 #upper .card {
+    position: absolute;
+}
+
+#page4 #upper .card img,
+#page4 #upper .card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page4 #upper #card1 {
+    width: 28vw;
+    height: 15vw;
+    top: 25%;
+    left: 15%;
+}
+
+#page4 #upper #card2 {
+    width: 12vw;
+    height: 18vw;
+    top: 10%;
+    left: 60%;
+}
+
+#page4 #upper #card3 {
+    width: 27vw;
+    height: 18vw;
+    top: 75%;
+    left: 11%;
+}
+
+#page4 #upper #card4 {
+    width: 24vw;
+    height: 27vw;
+    top: 75%;
+    left: 65%;
+}
+
+#page4 #lower {
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10vw 0vw;
+}
+
+#page4 #lower #header {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#page4 #lower #header h5 {
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#page4 #lower #heading h1 {
+    font-size: 10vw;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1;
+}
+
+#page4 #lower #text h3 {
+    font-size: 1.6vw;
+    font-weight: 500;
+    text-align: center;
+}
+
+#page4 #lower #button h5 {
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+#main-footer {
+    width: 100%;
+    height: 100vh;
+    background-color: #070707;
+    color: #B5A598;
+    font-family: regular;
+    padding: 5vw 8vw;
+}
+
+#main-footer #upper {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    border-bottom: 1px solid #B5A598;
+    position: relative;
+}
+
+#main-footer #upper #left {
+    width: 32%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
+}
+
+#main-footer #upper #left h1 {
+    font-size: 10vw;
+    font-weight: 500;
+    line-height: 1;
+    color: #E0CCBB;
+}
+
+#main-footer #upper #left h3 {
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+#main-footer #upper #right {
+    width: 65vw;
+    height: 30vw;
+    position: absolute;
+    top: 0%;
+    left: 30%;
+}
+
+#main-footer #upper #right video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scale: 0.9;
+}
+
+#main-footer #lower {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+#main-footer #lower #left {
+    display: flex;
+    gap: 5vw;
+}
+
+#main-footer #lower #left h5 {
+    font-size: 1.1vw;
+    font-weight: 500;
+    padding: 0.5vw;
+}
+
+#main-footer #lower #left #inner-left,
+#main-footer #lower #left #inner-center,
+#main-footer #lower #left #inner-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2vw;
+}
+
+#main-footer #lower #right {
+    height: 100%;
+    display: flex;
+    align-items: end;
+}
+
+#main-footer #lower #right h5 {
+    font-size: 1.1vw;
+    font-weight: 500;
+}
